@@ -30,5 +30,5 @@ Arguments
 ```
 Example
 ```
-python wiki-scraper.py -s python -t summary -u
+python wiki-scraper.py -s "artificial intelligence" -t summary -u
 ```

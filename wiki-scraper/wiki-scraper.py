@@ -16,24 +16,31 @@ def get_args():
 
 def search(options):
     try:
+        try:
       
-        if((options.type).lower() == "summary"):
-            print(wikipedia.summary(options.search, redirect=True, auto_suggest=False))
+            if((options.type).lower() == "summary"):
+                print(wikipedia.summary(options.search, redirect=True, auto_suggest=False))
 
-        elif((options.type).lower() == "content"):
-            response = wikipedia.page(options.search, auto_suggest=False, redirect=True)
-            with open(options.search+'.txt','w') as f:
-                f.write(response.content)
-            print("Done!")
+            elif((options.type).lower() == "content"):
+                response = wikipedia.page(options.search, auto_suggest=False, redirect=True)
+                with open(options.search+'.txt','w') as f:
+                    f.write(response.content)
+                print("Done!")
 
-        elif((options.type).lower()=="search"):
+            elif((options.type).lower()=="search"):
+                ls = wikipedia.search(options.search)
+                for i in range(0, len(ls)):
+                    print(ls[i])
+                
+            if options.url:
+                response = wikipedia.page(options.search, auto_suggest=False, redirect=True)
+                print(response.url)
+
+        except wikipedia.exceptions.DisambiguationError:
             ls = wikipedia.search(options.search)
+            print("Uhh! that was not found, you may try the following suggestions")
             for i in range(0, len(ls)):
                 print(ls[i])
-                
-        if options.url:
-            response = wikipedia.page(options.search, auto_suggest=False, redirect=True)
-            print(response.url)
 
     except wikipedia.exceptions.PageError:
         print("Page not found")

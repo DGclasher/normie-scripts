@@ -4,7 +4,7 @@
 
 Download the script
 ```
-git clone https://github.com/DGclasher/Get-Location
+wget https://github.com/DGclasher/normie-scripts/raw/main/get-location/getlocation.sh
 ```
 
 Required package

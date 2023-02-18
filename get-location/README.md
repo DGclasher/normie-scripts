@@ -1,21 +1,23 @@
-# Get-Location
-Get location of provided IP addresses using this script.
---------------------------------------------------------
+# Get Location
 
-    git clone https://github.com/DGclasher/Get-Location
+## Get location of provided IP addresses using this script.
 
-Required package:
+Download the script
+```
+git clone https://github.com/DGclasher/Get-Location
+```
 
-    sudo apt install jq -y
+Required package
+```
+sudo apt install jq -y
+```
 
-Run the getlocation.sh script with IP address as an arguement:
+Change the access mode and run the script
+```
+chmod +x getlocation.sh
+```
+```
+./getlocation.sh [IP]
+```
 
-    cd Get-Location/
-
-    chmod +x getlocation.sh
-
-    ./getlocation.sh [IP]
-
-The results will be saved in the log file.
-
---------------------------------------------------------
+Results will be saved in a logs file

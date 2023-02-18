@@ -1,6 +1,6 @@
 # Get Location
 
-## Get location of provided IP addresses using this script.
+## Get location of IP addresses
 
 Download the script
 ```

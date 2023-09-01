@@ -11,7 +11,7 @@ gdb_folder=$(echo "$gdb_version" | sed 's/\.tar\.gz//g')
 cd "$gdb_folder"
 
 echo "Making and Installing GDB"
-sh configure
+sh configure --with-python
 make
 sudo make install
 

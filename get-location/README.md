@@ -1,20 +1,23 @@
-# Get-Location
+# Get Location
 
-## Get location of provided IP addresses using this script.
+## Get location of IP addresses
 
 Download the script
 ```
 wget https://github.com/DGclasher/normie-scripts/raw/main/get-location/getlocation.sh
 ```
 
-Install the required package
+Required package
 ```
 sudo apt install jq -y
 ```
 
-Run the script with IP address as argument
+Change the access mode and run the script
+```
+chmod +x getlocation.sh
+```
 ```
 ./getlocation.sh [IP]
 ```
 
-Results will be saved in a log file
+Results will be saved in a logs file

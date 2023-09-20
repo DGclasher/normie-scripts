@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "adding to sources"
-sed -i '/^deb https:\/\/deb\.debian\.org/ s/$/ contrib non-free/' /etc/apt/sources.list
+sed -i '/^deb http:\/\/deb\.debian\.org\/debian\// s/$/ contrib non-free/' /etc/apt/sources.list
 
 echo "installing dependencies"
 apt update -y
@@ -10,6 +10,5 @@ apt install broadcom-sta-dkms network-manager -y
 
 modprobe -r b44 b43 b43legacy ssb brcmsmac bcma
 modprobe wl
-
+nmcli dev stat
 echo "Done!!"
-echo "Now check using nmcli utility"
